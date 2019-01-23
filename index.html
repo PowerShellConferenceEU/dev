@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="The official website for PowerShell Conference Europe.">
     <meta name="author" content="">
-    <title>PowerShell Conference Europe 2018</title>
+    <title>PowerShell Conference Europe 2019</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/pe-icons.css" rel="stylesheet">
     <link href="css/prettyPhoto.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
+    <link href="css/tablesaw.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <script src="js/jquery.js"></script>
     <!--[if lt IE 9]>
@@ -20,78 +22,110 @@
     <link rel="shortcut icon" href="images/ico/favicon.ico">
 
     <script type="text/javascript">
-    jQuery(document).ready(function($){
-	'use strict';
-      	jQuery('body').backstretch([
-	        "images/pic_jeffrey.jpg"
-	    ], {duration: 5000, fade: 500});
+        jQuery(document).ready(function ($) {
+            'use strict';
+            jQuery('body').backstretch([
+                "images/psconf_v4.jpg"
+            ], {
+                    duration: 5000,
+                    fade: 500
+                });
 
-		$("#mapwrapper").gMap({ controls: false,
-         	scrollwheel: false,
-         	markers: [{
-                html: '<h2>Hannover Congress Centrum</h2><p>Theodor-Heuss-Platz 1-3<br>30175 Hannover<br>Germany</p><p>+49 511 81130</p><p><a href="http://www.hcc.de/">hcc.de</a></p><p><a href="https://www.google.no/maps/dir//Hannover+Congress+Centrum,+Theodor-Heuss-Platz+1-3,+30175+Hannover/@52.3760037,9.7691176,17z/data=!4m13!1m4!3m3!1s0x47b00b5af0dd0b79:0xbc2cad20ca00fdfe!2sHannover+Congress+Centrum!3b1!4m7!1m0!1m5!1m1!1s0x47b00b5af0dd0b79:0xbc2cad20ca00fdfe!2m2!1d9.7691176!2d52.3760037?hl=en">Directions</a></p>',
-              	latitude:52.3760037,
-                longitude: 9.7691176
-            }],
-            icon: {
-                image: "http://www.google.com/mapfiles/marker.png",
-                shadow: "http://www.google.com/mapfiles/shadow50.png",
-                iconsize: [20, 34],
-                shadowsize: [37, 34],
-                iconanchor: [9, 34],
-                shadowanchor: [19, 34]
-            },
-         	latitude:52.3760037,
-         	longitude: 9.7691176,
-          	zoom: 17 });
+            $("#mapwrapper").gMap({
+                controls: false,
+                scrollwheel: false,
+                markers: [{
+                    html: '<h2>Hannover Congress Centrum</h2><p>Theodor-Heuss-Platz 1-3<br>30175 Hannover<br>Germany</p><p>+49 511 81130</p><p><a href="http://www.hcc.de/">hcc.de</a></p><p><a href="https://www.google.no/maps/dir//Hannover+Congress+Centrum,+Theodor-Heuss-Platz+1-3,+30175+Hannover/@52.3760037,9.7691176,17z/data=!4m13!1m4!3m3!1s0x47b00b5af0dd0b79:0xbc2cad20ca00fdfe!2sHannover+Congress+Centrum!3b1!4m7!1m0!1m5!1m1!1s0x47b00b5af0dd0b79:0xbc2cad20ca00fdfe!2m2!1d9.7691176!2d52.3760037?hl=en">Directions</a></p>',
+                    latitude: 52.3760037,
+                    longitude: 9.7691176
+                }],
+                icon: {
+                    image: "http://www.google.com/mapfiles/marker.png",
+                    shadow: "http://www.google.com/mapfiles/shadow50.png",
+                    iconsize: [20, 34],
+                    shadowsize: [37, 34],
+                    iconanchor: [9, 34],
+                    shadowanchor: [19, 34]
+                },
+                latitude: 52.3760037,
+                longitude: 9.7691176,
+                zoom: 17
+            });
 
-        // set the date we're counting down to
-        var target_date = new Date('Apr, 17, 2018').getTime();
-        var days, hours, minutes, seconds;
-        var countdown = document.getElementById('countdown');
-        setInterval(function () {
-             var current_date = new Date().getTime();
-             var seconds_left = (target_date - current_date) / 1000;
-             days = parseInt(seconds_left / 86400);
-             seconds_left = seconds_left % 86400;
-             hours = parseInt(seconds_left / 3600);
-             seconds_left = seconds_left % 3600;
-             minutes = parseInt(seconds_left / 60);
-             seconds = parseInt(seconds_left % 60);
-             countdown.innerHTML = '<span class="days">' + days +  ' <b>Days</b></span> <span class="hours">' + hours + ' <b>Hours</b></span> <span class="minutes">'
-            + minutes + ' <b>Minutes</b></span> <span class="seconds">' + seconds + ' <b>Seconds</b></span>';
-        }, 1000);
-    });
+            // set the date we're counting down to
+            var target_date = new Date('Jun, 4, 2019').getTime();
+            var days, hours, minutes, seconds;
+            var countdown = document.getElementById('countdown');
+            setInterval(function () {
+                var current_date = new Date().getTime();
+                var seconds_left = (target_date - current_date) / 1000;
+                days = parseInt(seconds_left / 86400);
+                seconds_left = seconds_left % 86400;
+                hours = parseInt(seconds_left / 3600);
+                seconds_left = seconds_left % 3600;
+                minutes = parseInt(seconds_left / 60);
+                seconds = parseInt(seconds_left % 60);
+                countdown.innerHTML = '<span class="days">' + days +
+                    ' <b>Days</b></span> <span class="hours">' + hours +
+                    ' <b>Hours</b></span> <span class="minutes">' +
+                    minutes + ' <b>Minutes</b></span> <span class="seconds">' + seconds +
+                    ' <b>Seconds</b></span>';
+            }, 1000);
+        });
     </script>
-</head><!--/head-->
+</head>
+<!--/head-->
+
 <body>
-<div id="preloader"></div>
+    <div id="preloader"></div>
     <header class="navbar navbar-inverse navbar-fixed-top opaqued" role="banner">
-    <div id="search-wrapper">
-        <div class="container">
-            <input id="search-box" placeholder="Search">
+        <div id="search-wrapper">
+            <div class="container">
+                <input id="search-box" placeholder="Search">
+            </div>
         </div>
-    </div>
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="index.html"><h1>psconf.eu</h1></a>
+                <a class="navbar-brand" href="index.html">
+                    <h1>psconf.eu</h1>
+                </a>
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <!--<li class="active"><a href="index.html">Home</a></li>-->
-                    <li><a href="#main-slider">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#register">Register</a></li>
-                    <li><a href="#cfp">CFP</a></li>
-                    <li><a href="#venue">Venue</a></li>
+                    <li>
+                        <a href="#main-slider">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="#cfp">CFP</a>
+                    </li>
+                    <li>
+                        <a href="#speakers">Speakers</a>
+                    </li>
+                    <li>
+                        <a href="#register">Register</a>
+                    </li>
+                    <li>
+                        <a href="#sponsor">Sponsor</a>
+                    </li>
+                    <!-- <li>
+                        <a href="#venue">Venue</a>
+                    </li> -->
+                    <li>
+                        <a href="legal.html">Legal</a>
+                    </li>
                 </ul>
             </div>
         </div>
-    </header><!--/header-->
+    </header>
+    <!--/header-->
 
     <section id="main-slider" class="no-margin">
         <div class="carousel slide" data-ride="carousel">
@@ -101,17 +135,25 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="carousel-content center centered">
-                                    <h2 class="boxed animation fade-down">PowerShell Conference Europe 2018</h2>
+                                    <h2 class="boxed animation fade-down">PowerShell Conference Europe 2019</h2>
+                                    <p>
+                                        Hannover, Germany - June 4-7 2019
+                                    </p>
                                     <br>
-                                    <div id="countdown" class="boxed animation fade-down"></div><!-- /#Countdown Div -->
+                                    <div id="countdown" class="boxed animation fade-down"></div>
+                                    <!-- /#Countdown Div -->
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div><!--/.item-->
-            </div><!--/.carousel-inner-->
-        </div><!--/.carousel-->
-    </section><!--/#main-slider-->
+                </div>
+                <!--/.item-->
+            </div>
+            <!--/.carousel-inner-->
+        </div>
+        <!--/.carousel-->
+    </section>
+    <!--/#main-slider-->
 
     <div id="content-wrapper">
 
@@ -121,7 +163,7 @@
                 <div class="gap"></div>
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="center gap fade-down section-heading">
+                        <div class="center gap section-heading">
                             <h2 class="main-title">About</h2>
                             <hr>
                         </div>
@@ -129,162 +171,286 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-md-10 col-md-offset-1 fade-up">
+                    <div class="col-md-10 col-md-offset-1">
                         <p>
-                            PowerShell Conference Europe is the largest PowerShell-themed
-                            conference in Europe, and is held in Hanover, Germany each year.
-                            We attract speakers and attendees from all over the world, with such
-                            topics as security, DevOps, databases, core language features,
-                            optimization, DSC, best practices and much more.
+                            Welcome to Europe’s largest PowerShell-themed annual conference! In 2019, we are looking forward to a joyful “Recalibration Week” where we put together all the opportunities that PowerShell offers in a modern world, and make this week a fun learning experience for everyone.
                         </p>
                         <p>
-                            If you use PowerShell in your daily job, this conference is
-                            the perfect opportunity to enchance your skillset as well as
-                            build your network with like-minded individuals. The talk between
-                            each session is often where the magic happens! All speakers are
-                            available (as much as it's possible) throughout the whole conference,
-                            and are approachable for questions and discussions.
+                            We’ll have 350 delegate seats again and 40 international speakers. You can build your personal agenda from 3 parallel tracks using our conference app (iOS, Android). Agenda information becomes available by end of January 2019.
                         </p>
                         <p>
-                            Each year Microsoft also sends a delegation from the PowerShell team,
-                            and this is a unique opportunity to interact directly with the people
-                            responsible for developing PowerShell.
+                            Here is why people from 35 countries travel to Hannover to attend:
+                        </p>
+                        <ul>
+                            <li>
+                                Advanced PowerShell Topics: In 2019, we want sessions to be even more practical, so most come with a promise: “When you attend this session, you will be able to [control Philips lights with PowerShell]/[execute code visibly in the context of another logged on user]/[stream data right into a database and create the required tables on the fly]/[identify top bottle necks in script code and speed up things by factor 200]/etc. pp. With roughly 80 sessions, there’s a lot of knowledge to harvest and take home.
+                            </li>
+                            <li>
+                                Great Speakers: A ratio of 1 speaker per 10 delegates makes psconf.eu very personal. Speakers are renown international industry experts with solid experience. Most have built popular PowerShell extensions like dbatools, have written books like “PowerShell Cookbook”, or have invented PowerShell itself like the PowerShell team from Redmond. There is always time for your questions, and our Speakers are curious to hear what you are doing with PowerShell.
+                            </li>
+                            <li>
+                                Inspiring Delegates: Most delegates are experienced professional PowerShell users and automation experts who are writing and running the company’s automation scripts. You don’t have to be a PowerShell wizard to attend (although many wizards do). Anyone who dares can get the stage during lunch time for a 15 or 30 minute “Birds of Feather” slot. Test drive your career as a future speaker, and present tricks and techniques to fellow delegates and speakers.
+                            </li>
+                        </ul>
+                        <br>
+                        <img src="images/ending.jpg" class="img-responsive">
+                        <br>
+                        <p>
+                            psconf.eu is a blend of conference and training experience, so however you like to call it, you can choose whether you want us to bill you for a conference or a training event.
                         </p>
                         <p>
-                            In 2018, we extend the conference from 3 to 4 days and include a new
-                            PowerShell Guerilla Evening. Delegates get the chance to actually work
-                            with some of the many new and exciting technologies, guided by speakers
-                            and experts. Instead of just listening to presentations,
-                            the Guerilla Evening gives you the chance to actually put things to work
-                            and get high class guidance. For example, security expert Will Harmj0y
-                            and colleagues will point you to the tools required to defend
-                            IT environments, and you'll actually see and learn how PowerShell can
-                            be used as a forensic tool, how attackers work, and how you can defend
-                            attacks. Bring a notebook if you'd like to code yourself, or just follow
-                            the demos.
+                            So don’t wait until it’s sold out (again), join us and and secure your seat now! Simply click the link below to open the registration form. Admission includes access to venue and tracks, conference materials, coffee breaks and snacks, lunch, Zoo evening dinner event, and mug. Travel and accommodation not included.
                         </p>
                         <p>
-                            The conference is organized by the community, for the community!
-                            And we are happy to welcome you to yet another brilliant conference
-                            on April 17-20, 2018. Will we see you there?
+                            <a href="#register">CLICK TO OPEN REGISTRATION FORM!</a>
+                        </p>
+                        <p>
+                            You can also <a href="https://github.com/PowerShellConferenceEU/PowerShellConferenceEU.github.io/raw/master/files/proposal.pdf"><u>download
+                            a proposal here.</u></a>. And if you need to convince your boss, simply do the math: psconf.eu is cheaper than most public trainings, and in a fast-paced world where scripts and automation are part of business-critical processes, once a year it’s just due to come together, update know-how, learn about latest security challenges and mitigations, and bring home fresh ideas, best practices, and inspiration.
+                        </p>
+                        <br>
+                        <img src="images/sadjoey.jpg" class="img-responsive">
+                        <br>
+                        <p>
+                            We are doing this conference for passion not profit, and all speakers volunteer. 
+                            Conference fee gets us a great venue, healthy and tasty lunch, snacks and coffee breaks, 
+                            covers session video recording, pays the rent for the Zoo dinner evening event, and enables us to pay hotel 
+                            accommodation for speakers. Should you be intrigued to sponsor this event,
+                            <a href="#sponsor"><u>download our sponsor information here.</u></a> 
+                        </p>                        
+                    </div>
+                    <div class="gap"></div>
+                    <div class="col-md-10 col-md-offset-1">
+                        <p>
+                            To catch the spirit of this conference, have a look at the official 2017 after-conference
+                            movie here:
+                        </p>
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/G38tN7B46Fg"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call for papers -->
+        <section id="cfp" class="divider-section">
+            <div class="container">
+                <div class="gap"></div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="center gap section-heading">
+                            <h2 class="main-title">Call for papers</h2>
+                            <hr>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <p>
+                            If you would like to speak at this years conference, please submit your proposals at the
+                            following link:<br>
+                            <a href="https://www.papercall.io/psconfeu2019"><u>https://www.papercall.io/psconfeu2019</u></a>
+                        </p>
+                        <p>
+                            We will accept session proposals until December 9. 2018.
                         </p>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Speakers -->
+        <section id="speakers" class="white">
+            <div class="container">
+                <div class="gap"></div>
+                <div class="center gap section-heading">
+                    <h2 class="main-title">Speakers</h2>
+                    <hr>
+                </div>
+                <ul class="portfolio-filter center">
+                    <li><a class="btn btn-outlined btn-primary" href="#" data-filter="*">All</a></li>
+                    <li><a class="btn btn-outlined btn-primary active" href="#" data-filter=".featured">Featured</a></li>
+                </ul>
+                <!--/#portfolio-filter-->
+
+                <ul class="portfolio-items col-6 isotope">
+                    <li class="portfolio-item featured isotope-item">
+                        <div class="item-inner">
+                            <img src="images/speakers/Chrissy_LeMaire.png" alt="Chrissy LeMaire">
+                            <h6>Chrissy LeMaire</h6>
+                            <!-- <div class="overlay">
+                                <div class="team-content fade-up">
+                                    <h6>Chrissy LeMaire<small> MVP</small></h6>
+                                    <p><small>Chrissy is a PowerShell & SQL Server MVP and creator of the popular PowerShell module, dbatools. She also serves as the SQL Server DBA for GDIT at NATO Special Ops HQ in Beglium.</small></p>
+                                    <p><small>Chrissy recently finshed her MS in Systems Engineering and looks forward to exploring more of Europe in her newly found free time.</small></p>
+                                </div>
+                            </div> -->
+                        </div>
+                    </li>
+                    <!--/.portfolio-item-->
+                    <li class="portfolio-item featured isotope-item">
+                        <div class="item-inner">
+                            <img src="images/speakers/Carlos_Perez.jpg" alt="Carloz Perez">
+                            <h6>Carlos Perez</h6>
+                            <!-- <div class="overlay">
+                                    <div class="team-content fade-up">
+                                        <h5>Carlos Perez<small>MVP</small></h5>
+                                        <p>Carlos has been working in infused for over 20 years focusing on both defense and offense. He is better knows in the security community for his contributions to the Metasploit project and as one of the co-hosts of the Security Weekly podcast.</p>
+                                        <p>Carlos is currently the Research Practice Lead for TrustedSec where he focuses on research for tools used by both red and blu teams.</p>
+                                    </div>
+                                </div>            -->
+                        </div>
+                    </li>
+                    <!--/.portfolio-item-->
+                    <li class="portfolio-item featured isotope-item">
+                        <div class="item-inner">
+                            <img src="images/speakers/Daniel_Bohannon.png" alt="Daniel Bohannon">
+                            <h6>Daniel Bohannon</h6>
+                            <!-- <div class="overlay">
+                                    <div class="team-content fade-up">
+                                        <h5>Daniel Bohannon</h5>
+                                        <p>
+                                            <small>Daniel is a Senior Applied Security Researcher with FireEye’s Advanced Practices Team with over eight years of operations, security and Incident Response consulting experience.</small>
+                                        </p>
+                                        <p>
+                                            <small>He is the author of Invoke-Obfuscation, Invoke-CradleCrafter, Invoke-DOSfuscation and co-author of the Revoke-Obfuscation detection framework. He has presented at numerous conferences including Black Hat USA, DEF CON, DerbyCon and BlueHat.</small>
+                                        </p>
+                                    </div>
+                                </div>            -->
+                        </div>
+                    </li>
+                    <!--/.portfolio-item-->
+                    <li class="portfolio-item featured isotope-item">
+                        <div class="item-inner">
+                            <img src="images/speakers/Lee_Holmes.jpg" alt="Lee Holmes">
+                            <h6>Lee Holmes</h6>
+                            <!-- <div class="overlay">
+                                    <div class="team-content fade-up">
+                                        <h5>Lee Holmes<small>Microsoft</small></h5>
+                                        <p>Lee Holmes is the lead security architect of Microsoft's Azure Storage and Cloud Edge group.</p>
+                                        <p>He is author of the Windows PowerShell Cookbook, and an original member of the PowerShell development team.</p>
+                                    </div>
+                                </div> -->
+                        </div>
+                    </li>
+                    <!--/.portfolio-item-->
+                    <li class="portfolio-item featured isotope-item">
+                        <div class="item-inner">
+                            <img src="images/speakers/Staffan_Gustafsson.jpg" alt="Staffan Gustafsson">
+                            <h6>Staffan Gustafsson</h6>
+                            <!-- <div class="overlay">
+                                    <div class="team-content fade-up">
+                                        <h5>Staffan Gustafsson</h5>
+                                        <p>Staffan Gustafsson is a software engineer currently working at DICE in Stockholm, Sweden, making AAA games. While the games are written in C++, a lot of tooling is written in C# and PowerShell, and Staffan has been actively following the development of these languages since they were in beta.</p>
+                                        <p>He was very happy when PowerShell was made open source and is now participating in the development of the language.</p>
+                                    </div>
+                                </div> -->
+                        </div>
+                    </li>
+                    <!--/.portfolio-item-->
+                    <li class="portfolio-item featured isotope-item">
+                        <div class="item-inner">
+                            <img src="images/speakers/Walter_Legowski.png" alt="Walter Legowski">
+                            <h6>Walter Legowski</h6>
+                            <!-- <div class="overlay">
+                                    <div class="team-content fade-up">
+                                        <h5>Walter Legowski</h5>
+                                        <p>Walter Legowski aka @SadProcessor
+                                                Imposter dreaming of being as awesome as @Jaap_Brasser.
+                                                Addicted PowerShell Gang Member.
+                                                Born in FR, living in NL, working in DE.
+                                                $True ShellFather Worshiper & $False PoSh Bad Boy.
+                                                Father. Maker, Breaker, Fixer, Trainer, Speaker.
+                                                Working with Admins to make the world a safer place;
+                                                One PoSh one-liner at a time...
+                                                In search of Emancipation by means of Automation.
+                                                N00b 4 Life.
+                                                Would like to give back to the community a fraction of what it gave me.
+                                                Would love to meet you for a drink.
+                                                </p>
+                                    </div>
+                                </div> -->
+                        </div>
+                    </li>
+                    <!--/.portfolio-item-->
+                </ul>
             </div>
         </section>
 
         <!-- Register -->
-        <section id="register" class="divider-section">
+        <section id="register" class="white">
             <div class="container">
                 <div class="gap"></div>
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="center gap fade-down section-heading">
+                        <div class="center gap section-heading">
                             <h2 class="main-title">Register</h2>
                             <hr>
-                            <p>Don't miss out!</p>
+                            <p></p>
                         </div>
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="col-md-10 col-md-offset-1 fade-up">
-                        <p>
-                            PowerShell Conference Europe is all about creativity
-                            paired with rock-solid professional firsthand information.
-                            It's a friendly place where you can meet new people,
-                            connect with user groups, find answers and bring back
-                            some fresh ideas
-                        </p>
-                        <p>
-                            Admission is EUR 1.399,- for 4 days and includes 50 sessions, lunch,
-                            coffee breaks, evening event at the Zoo with dinner, drinks, and
-                            ice cream until late, and Guerilla Evening event.
-                            Hotel accommodation is not included.
-                        </p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-10 col-md-offset-1 fade-up">
-                        <p><a href="https://tobiaspsp.wufoo.eu/forms/pwqxyjc1nqtvp0">Formular in deutsch</a></p>
-                    </div>
-                    <div class="col-md-10 col-md-offset-1 fade-up">
-                        <div class="panel panel-default box-shadow--3dp">
-                            <div class="panel-body">
+                    <div class="col-md-10 col-md-offset-1">
                         <div id="wufoo-z1cygvfw1pmlcnc">
-                            Fill out my <a href="https://tobiaspsp.wufoo.eu/forms/z1cygvfw1pmlcnc">online form</a>.
+
+                            Fill out my <a href="https://tobiaspsp.wufoo.com/forms/z1cygvfw1pmlcnc">online form</a>.
+
                         </div>
-                        <script type="text/javascript">
-                            var z1cygvfw1pmlcnc;(function(d, t) {
+
+                        <script type="text/javascript">var z1cygvfw1pmlcnc; (function (d, t) {
                                 var s = d.createElement(t), options = {
-                                'userName':'tobiaspsp',
-                                'formHash':'z1cygvfw1pmlcnc',
-                                'autoResize':true,
-                                'height':'1221',
-                                'async':true,
-                                'host':'wufoo.eu',
-                                'header':'show',
-                                'ssl':true};
-                            s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'www.wufoo.eu/scripts/embed/form.js';
-                            s.onload = s.onreadystatechange = function() {
-                            var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
-                            try { z1cygvfw1pmlcnc = new WufooForm();z1cygvfw1pmlcnc.initialize(options);z1cygvfw1pmlcnc.display(); } catch (e) {}};
+                                    'userName': 'tobiaspsp',
+                                    'formHash': 'z1cygvfw1pmlcnc',
+                                    'autoResize': true,
+                                    'height': '1427',
+                                    'async': true,
+                                    'host': 'wufoo.com',
+                                    'header': 'show',
+                                    'ssl': true
+                                };
+                                s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'www.wufoo.com/scripts/embed/form.js';
+                                s.onload = s.onreadystatechange = function () {
+                                    var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
+                                    try { z1cygvfw1pmlcnc = new WufooForm(); z1cygvfw1pmlcnc.initialize(options); z1cygvfw1pmlcnc.display(); } catch (e) { }
+                                };
                                 var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
-                            })(document, 'script');
-                        </script>
-                            </div></div>
+                            })(document, 'script');</script>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Call for Papers -->
-        <section id="cfp" class="white">
+        <!-- Sponsor -->
+        <section id="sponsor" class="white">
             <div class="container">
                 <div class="gap"></div>
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="center gap fade-down section-heading">
-                            <h2 class="main-title">Call for Papers</h2>
+                        <div class="center gap section-heading">
+                            <h2 class="main-title">Sponsor</h2>
                             <hr>
+                            <p></p>
                         </div>
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="col-md-10 col-md-offset-1 fade-up alert alert-warning">
+                    <div class="col-md-10 col-md-offset-1">
                         <p>
-                            We’d like you to be part of the psconf.eu 2018 speakers team,
-                            and share your knowledge, experience, and wisdom!
-                            This is what we are looking for:<br><br>
-
-                            <h4>Classic Presentations (45 min + 15 min Q&A)</h4>
-                            Focus on fresh content that would make a difference to you if
-                            you where listening to it. Always consider that psconfEU audiences
-                            are experienced PowerShell users.<br><br>
-
-                            <h4>Expert-Led Training Sessions (60 min)</h4>
-                            In 2018, we want to complement classic frontal presentation with labs where
-                            audiences can bring their PowerShell 5/Core notebook and follow along your demo.
-                            Choose this session type only for sessions where you are confident that 60 min
-                            time is sufficient. We will have one designated evening event for more
-                            extensive hands-on sessions that will be organized separately among accepted
-                            speakers and staff.<br><br>
-                        </p>
-                        <p>
-                            If you would like to speak at PowerShell Conference Europe,
-                            please submit one or more session propopals at our
-                            <a href="https://www.papercall.io/psconfeu">PaperCall site</a>!
-                        </p>
-                        <p>
-                            <b>CFP closes on November 30, 2017!</b>
+                            If you would like to know more about sponsoring psconf.eu, <a href="https://github.com/PowerShellConferenceEU/PowerShellConferenceEU.github.io/raw/master/files/sponsors.pdf"><u>download our sponsor information here.</u></a>
                         </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="venue" class="white">
+        <!-- Venue -->
+        <!-- <section id="venue" class="white">
             <div class="container">
                 <div class="gap"></div>
                 <div class="row">
@@ -299,67 +465,123 @@
                 <div class="gap"></div>
                 <div class="col-md-10 col-md-offset-1 fade-up">
                     <p>
-                            The conference takes place in the
-                            <a href="http://www.hcc.de/" target="_blank">Hannover Conference Centrum (HCC)</a>
-                            in Hannover, Germany.
+                        The conference takes place in the
+                        <a href="http://www.hcc.de/" target="_blank">Hannover Conference Centrum (HCC)</a>
+                        in Hannover, Germany.
                     </p>
                     <p>
-                        Please note that hotel cost and hotel reservations are not
-                        included or covered in any way in the conference fee.
-                        Any booking arrangement is between you and the hotel.
+                        Please note that hotel cost and hotel reservations are not included or covered in any way in the conference fee. Any booking
+                        arrangement is between you and the hotel.
                     </p>
 
                     <div class="gap"></div>
                     <div id="mapwrapper">
                         <div id="map"></div>
                     </div>
+                </div>
+            </div>
+        </div>
+        </section> -->
+
+
+        <!-- Contact -->
+        <section id="contact" class="white">
+            <div class="container">
+                <div class="gap"></div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="center gap section-heading">
+                            <h2 class="main-title">Contact</h2>
+                            <hr>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div id="wufoo-q1dvd4gc1inhctm">
+                            Fill out my <a href="https://tobiaspsp.wufoo.com/forms/q1dvd4gc1inhctm">online form</a>.
+                        </div>
+                        <script type="text/javascript">var q1dvd4gc1inhctm; (function (d, t) {
+                                var s = d.createElement(t), options = {
+                                    'userName': 'tobiaspsp',
+                                    'formHash': 'q1dvd4gc1inhctm',
+                                    'autoResize': true,
+                                    'height': '519',
+                                    'async': true,
+                                    'host': 'wufoo.com',
+                                    'header': 'show',
+                                    'ssl': true
+                                };
+                                s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'www.wufoo.com/scripts/embed/form.js';
+                                s.onload = s.onreadystatechange = function () {
+                                    var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
+                                    try { q1dvd4gc1inhctm = new WufooForm(); q1dvd4gc1inhctm.initialize(options); q1dvd4gc1inhctm.display(); } catch (e) { }
+                                };
+                                var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
+                            })(document, 'script');
+                        </script>
                     </div>
                 </div>
             </div>
         </section>
-
-        <div id="footer-wrapper">
-                <section id="bottom" class="">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <p>
-                                    The global PowerShell community arranges
-                                    conferences in three parts of the world, so if you
-                                    are unable to attend PowerShell Conference Europe
-                                    perhaps you would like to consider these instead:
-                                </p>
-                                <ul>
-                                    <li><a href="http://powershell.asia/">PowerShell Conference Asia</a></li>
-                                    <li><a href="https://powershell.org/summit/">PowerShell + DevOps Global Summit</a></li>
-                                </ul>
-                            </div>
-                        </div>
+    </div>
+    <!-- Footer -->
+    <div id="footer-wrapper">
+        <section id="bottom" class="">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>
+                            The global PowerShell community arranges conferences in three parts of the world, so if you
+                            are unable to attend PowerShell
+                            Conference Europe perhaps you would like to consider these instead:
+                        </p>
+                        <ul>
+                            <li>
+                                <a href="http://powershell.asia/">PowerShell Conference Asia</a>
+                            </li>
+                            <li>
+                                <a href="https://powershell.org/summit/">PowerShell + DevOps Global Summit</a>
+                            </li>
+                        </ul>
                     </div>
-                </section><!--/#bottom-->
+                </div>
+            </div>
+        </section>
+        <!--/#bottom-->
 
-                <footer id="footer" class="">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                &copy; 2017 <a target="_blank" href="http://psconf.eu">psconf.eu</a>. All Rights Reserved.
-                            </div>
-                            <div class="col-sm-6">
-                                <ul class="pull-right">
-                                    <li><a id="gototop" class="gototop" href="#"><i class="fa fa-chevron-up"></i></a></li><!--#gototop-->
-                                </ul>
-                            </div>
-                        </div>
+        <footer id="footer" class="">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        &copy;
+                        <a target="_blank" href="http://psconf.eu">psconf.eu</a>. All Rights Reserved.
                     </div>
-                </footer><!--/#footer-->
-
-
+                    <div class="col-sm-6">
+                        <ul class="pull-right">
+                            <li>
+                                <a id="gototop" class="gototop" href="#">
+                                    <i class="fa fa-chevron-up"></i>
+                                </a>
+                            </li>
+                            <!--#gototop-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--/#footer-->
     </div>
 
     <script src="js/plugins.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/tablesaw.jquery.js"></script>
+    <script src="js/tablesaw-init.js"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWDPCiH080dNCTYC-uprmLOn2mt2BMSUk&amp;sensor=true"></script>
     <script src="js/init.js"></script>
 </body>
+
 </html>
